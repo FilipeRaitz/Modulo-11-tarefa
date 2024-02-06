@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+nav {
+    background-color: hsl(216, 100%, 50%);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+}
+
+nav * {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    color: white;
+}
+
+nav h1, nav li {
+    padding: 0 1em;
+}
+
+nav h1 {
+    font-size: 2rem;
+    font-style: italic;
+}
+
+nav h2 {
+    font-size: 1rem;
+}
+
+nav ul li:hover, nav div:hover, .btn-adicionar-carrinho:hover {
+    background-color: hsl(216, 95%, 57%);
+    transition: ease-in-out 0.1s;
+}
+
+section {
+    margin: 3rem;
+}
+
+section > * {
+    margin-bottom: 1rem;
+}
+
+picture img {
+    max-width: 100%;
+    margin-bottom: 1rem;
+}
+
+section h1 {
+    font-style: italic;
+    font-size: 1.5rem;
+    color: hsl(216, 100%, 50%);
+    padding-bottom: .5em;
+    margin-bottom: 1em;
+    border-bottom: 2px solid hsl(216, 100%, 50%);
+}
+
+.produto {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.produto img {
+    width: 100%;
+}
+
+.produto img:hover, .produto h2:hover, .produto .btn-adicionar-carrinho:hover {
+    transform: scale(1.05);
+    transition: ease-in-out 0.1s;
+}
+
+section .btn-adicionar-carrinho {
+    background-color: hsl(216, 100%, 50%);
+    border-radius: .5rem;
+    padding: .5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+@media screen and (min-width: 641px) and (max-width: 1023px) {
+    .lista-produtos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+    
+}
+
+
+@media screen and (min-width: 1024px) {
+    .sec-sobre-a-loja {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 2rem;
+    }
+    .lista-produtos {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+    }
+    
+}
